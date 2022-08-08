@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message FileUpload_Message {
+  string fileUuid = 1;
+  uint64 position = 2;
+  bytes data = 3;
+}
+
