@@ -20,8 +20,8 @@
  *      limitations under the License.
  */
 
-#ifndef SAGIRI_HANAMIMESSAGES_H
-#define SAGIRI_HANAMIMESSAGES_H
+#ifndef SHIORI_HANAMIMESSAGES_H
+#define SHIORI_HANAMIMESSAGES_H
 
 #include <stdint.h>
 #include <libKitsunemimiHanamiCommon/messages.h>
@@ -144,4 +144,4 @@ public:
 }  // namespace Hanami
 }  // namespace Kitsunemimi
 
-#endif // SAGIRI_HANAMIMESSAGES_H
+#endif // SHIORI_HANAMIMESSAGES_H

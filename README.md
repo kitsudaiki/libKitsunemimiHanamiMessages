@@ -1,1 +1,1 @@
-# libKitsunemimiHanamiProtobuffers
+# libKitsunemimiHanamiMessages
