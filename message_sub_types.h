@@ -15,25 +15,20 @@
  *      limitations under the License.
  */
 
-syntax = "proto3";
+enum ShioriMessageTypes
+{
+    SHIORI_UNDEFINED_MESSAGE_TYPE = 0,
+    SHIORI_DATASET_REQUEST_MESSAGE_TYPE = 1,
+    SHIORI_RESULT_PUSH_MESSAGE_TYPE = 2,
+    SHIORI_AUDIT_LOG_MESSAGE_TYPE = 3,
+    SHIORI_ERROR_LOG_MESSAGE_TYPE = 4,
+    SHIORI_CLUSTER_SNAPSHOT_PUSH_MESSAGE_TYPE = 5,
+    SHIORI_CLUSTER_SNAPSHOT_PULL_MESSAGE_TYPE = 6,
+};
 
-enum ClusterProcessType {
-  REQUEST_TYPE = 0;
-  LEARN_TYPE = 1;
-}
 
-enum ClusterDataType {
-  INPUT_TYPE = 0;
-  SHOULD_TYPE = 1;
-  OUTPUT_TYPE = 2;
-}
-
-message ClusterIO_Message {
-  string segmentName = 1;
-  bool isLast = 2;
-  ClusterProcessType processType = 3;
-  ClusterDataType dataType = 4;
-  uint64 numberOfValues = 5;
-  repeated float values = 6 [packed=true];
-}
-
+enum AzukiMessageTypes
+{
+    AZUKI_UNDEFINED_MESSAGE_TYPE = 0,
+    AZUKI_SPEED_SET_MESSAGE_TYPE = 1,
+};
