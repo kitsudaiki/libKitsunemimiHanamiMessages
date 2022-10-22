@@ -15,15 +15,20 @@
  *      limitations under the License.
  */
 
-syntax = "proto3";
+enum ShioriMessageTypes
+{
+    SHIORI_UNDEFINED_MESSAGE_TYPE = 0,
+    SHIORI_DATASET_REQUEST_MESSAGE_TYPE = 1,
+    SHIORI_RESULT_PUSH_MESSAGE_TYPE = 2,
+    SHIORI_AUDIT_LOG_MESSAGE_TYPE = 3,
+    SHIORI_ERROR_LOG_MESSAGE_TYPE = 4,
+    SHIORI_CLUSTER_SNAPSHOT_PUSH_MESSAGE_TYPE = 5,
+    SHIORI_CLUSTER_SNAPSHOT_PULL_MESSAGE_TYPE = 6,
+};
 
-enum SpeedState {
-    MINIMUM_SPEED = 0;
-    AUTOMATIC_SPEED = 1;
-    MAXIMUM_SPEED = 2;
-}
 
-message SetCpuSpeed_Message {
-    SpeedState type = 1;
-}
-
+enum AzukiMessageTypes
+{
+    AZUKI_UNDEFINED_MESSAGE_TYPE = 0,
+    AZUKI_SPEED_SET_MESSAGE_TYPE = 1,
+};
