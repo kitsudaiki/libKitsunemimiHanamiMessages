@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+enum SpeedState {
+    MINIMUM_SPEED = 0;
+    AUTOMATIC_SPEED = 1;
+    MAXIMUM_SPEED = 2;
+}
+
+message SetCpuSpeed_Message {
+    SpeedState type = 1;
+}
+
